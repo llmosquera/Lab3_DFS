@@ -52,22 +52,83 @@ if __name__ == "__main__":
 
     '''Crear una instancia de los Grafos clase
     Este grafo no está dirigido y tiene 5 nodos el cual realizara su respectiva recorrido'''
-    graph = Grafo(5, dirigido=False)
-
-    '''Agregue bordes al grafo con determinado  peso = 1 
-    Estas lineas de codigo es para añadir los elementos de los nodos
-    que tenemos que van recorriendo en cadena'''
-    graph.add_arista(0, 1)
+    graph = Grafo(8, dirigido=False)
+    
+    
+    '''Caso principal
+     graph.add_arista(0, 1)
     graph.add_arista(0, 2)
     graph.add_arista(1, 3)
     graph.add_arista(2, 3)
+    graph.add_arista(3, 4)'''
+    
+    
+    '''Primera prueba de Caso
+     graph.add_arista(1, 2)
+    graph.add_arista(2, 1)
+    graph.add_arista(2, 3)
+    graph.add_arista(3, 2)
     graph.add_arista(3, 4)
+    graph.add_arista(3, 5)
+    graph.add_arista(4, 3)
+    graph.add_arista(5, 3)
+    graph.add_arista(6, 1)
+    graph.add_arista(6, 7)
+    graph.add_arista(6, 11)
+    graph.add_arista(7, 6)
+    graph.add_arista(7, 8)
+    graph.add_arista(8, 7)
+    graph.add_arista(8, 9)
+    graph.add_arista(8, 10)
+    graph.add_arista(9, 8)
+    graph.add_arista(10, 8)
     # Print adjacency list in the form node n: {(node, weight)}
     graph.print_lista_calificativo()
 
     traversal_path = []
-    traversal_path = graph.dfs(0, 3)
-    print(f" The traversal path from node 0 to node 3 is {traversal_path}")
+    traversal_path = graph.dfs(0, 10)
+    print(f" The traversal path from node 1 to node 10 is {traversal_path}")
+    '''
+    
+    '''Segunda  prueba de Caso
+    
+     graph.add_arista(2, 3)
+    graph.add_arista(2, 4)
+    graph.add_arista(3, 6)
+    graph.add_arista(3, 5)
+    graph.add_arista(4, 2)
+    graph.add_arista(4, 7)
+    graph.add_arista(5, 3)
+    graph.add_arista(6, 3)
+    graph.add_arista(7, 4)
+
+    # Print adjacency list in the form node n: {(node, weight)}
+    graph.print_lista_calificativo()
+
+    traversal_path = []
+    traversal_path = graph.dfs(2, 7)
+    print(f" The traversal path from node 2 to node 7 is {traversal_path}")
+    '''
+
+    '''Agregue bordes al grafo con determinado  peso = 1 
+    Estas lineas de codigo es para añadir los elementos de los nodos
+    que tenemos que van recorriendo en cadena'''
+    graph.add_arista(2, 3)
+    graph.add_arista(2, 4)
+    graph.add_arista(3, 6)
+    graph.add_arista(3, 5)
+    graph.add_arista(4, 2)
+    graph.add_arista(4, 7)
+    graph.add_arista(5, 3)
+    graph.add_arista(6, 3)
+    graph.add_arista(7, 4)
+
+    # Print adjacency list in the form node n: {(node, weight)}
+    graph.print_lista_calificativo()
+
+    traversal_path = []
+    traversal_path = graph.dfs(2, 7)
+    print(f" The traversal path from node 2 to node 7 is {traversal_path}")
 
 
 
