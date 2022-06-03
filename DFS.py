@@ -113,22 +113,21 @@ if __name__ == "__main__":
     '''Agregue bordes al grafo con determinado  peso = 1 
     Estas lineas de codigo es para añadir los elementos de los nodos
     que tenemos que van recorriendo en cadena'''
-    graph.add_arista(2, 3)
-    graph.add_arista(2, 4)
-    graph.add_arista(3, 6)
     graph.add_arista(3, 5)
-    graph.add_arista(4, 2)
-    graph.add_arista(4, 7)
+    graph.add_arista(3, 6)
+    graph.add_arista(4, 6)
     graph.add_arista(5, 3)
+    graph.add_arista(5, 7)
     graph.add_arista(6, 3)
-    graph.add_arista(7, 4)
+    graph.add_arista(6, 4)
+    
 
     # Print adjacency list in the form node n: {(node, weight)}
     graph.print_lista_calificativo()
 
     traversal_path = []
-    traversal_path = graph.dfs(2, 7)
-    print(f" The traversal path from node 2 to node 7 is {traversal_path}")
+    traversal_path = graph.dfs(3, 6)
+    print(f" The traversal path from node 3 to node 6 is {traversal_path}")
 
 
 
